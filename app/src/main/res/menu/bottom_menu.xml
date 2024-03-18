@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:icon="@drawable/home_icon"
+        android:title="Home"
+        />
+    <item
+        android:id="@+id/booking"
+        android:enabled="true"
+        android:icon="@drawable/booking_icon"
+        android:title="Booking"/>
+
+    <item
+        android:id="@+id/qr"
+        android:enabled="true"
+        android:icon="@drawable/qr_icon"
+        android:title="QR"/>
+    <item
+        android:id="@+id/favorites"
+        android:enabled="true"
+        android:icon="@drawable/favorites_icon"
+        android:title="Favorites">
+    </item>
+
+    <item
+        android:id="@+id/account"
+        android:enabled="true"
+        android:icon="@drawable/profile_icon"
+        android:title="Account">
+    </item>
+</menu>

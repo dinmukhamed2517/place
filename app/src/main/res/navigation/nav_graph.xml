@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="kz.sd.place.fragments.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_home_to_placeDetailsFragment"
+            app:destination="@id/placeDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/account"
+        android:name="kz.sd.place.fragments.AccountFragment"
+        android:label="AccountFragment" />
+    <fragment
+        android:id="@+id/booking"
+        android:name="kz.sd.place.fragments.BookingFragment"
+        android:label="BookingFragment" />
+    <fragment
+        android:id="@+id/favorites"
+        android:name="kz.sd.place.fragments.FavoritesFragment"
+        android:label="FavoritesFragment" />
+    <fragment
+        android:id="@+id/qr"
+        android:name="kz.sd.place.fragments.QRFragment"
+        android:label="QRFragment" />
+    <fragment
+        android:id="@+id/placeDetailsFragment"
+        android:name="kz.sd.place.fragments.PlaceDetailsFragment"
+        android:label="PlaceDetailsFragment" >
+        <argument
+            android:name="Place"
+            app:argType="kz.sd.place.models.Place" />
+        <action
+            android:id="@+id/action_placeDetailsFragment_to_bookTableFragment"
+            app:destination="@id/bookTableFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookTableFragment"
+        android:name="kz.sd.place.fragments.BookTableFragment"
+        android:label="BookTableFragment" >
+        <action
+            android:id="@+id/action_bookTableFragment_to_confirmBookingFragment"
+            app:destination="@id/confirmBookingFragment" />
+        <argument
+            android:name="Place"
+            app:argType="kz.sd.place.models.Place" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmBookingFragment"
+        android:name="kz.sd.place.fragments.ConfirmBookingFragment"
+        android:label="ConfirmBookingFragment" >
+        <argument
+            android:name="ConfirmInfo"
+            app:argType="kz.sd.place.fragments.ConfirmInfo" />
+        <action
+            android:id="@+id/action_confirmBookingFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="kz.sd.place.fragments.PaymentFragment"
+        android:label="PaymentFragment" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="kz.sd.place.fragments.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="kz.sd.place.fragments.SignUpFragment"
+        android:label="SignUpFragment" >
+        <action
+            android:id="@+id/action_signUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+</navigation>
